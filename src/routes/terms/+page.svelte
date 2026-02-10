@@ -28,10 +28,6 @@
 					<content.default />
 				</div>
 			</div>
-		{:else}
-			<div class="loading" transition:fade>
-				<p>{currentLocale === 'en' ? 'Loading...' : 'Cargando...'}</p>
-			</div>
 		{/if}
 	</div>
 </div>

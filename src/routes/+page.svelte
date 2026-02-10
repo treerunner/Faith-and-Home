@@ -31,10 +31,6 @@
 				</div>
 			</div>
 		</section>
-	{:else}
-		<div class="container loading" transition:fade>
-			<p>{currentLocale === 'en' ? 'Loading...' : 'Cargando...'}</p>
-		</div>
 	{/if}
 </div>
 
