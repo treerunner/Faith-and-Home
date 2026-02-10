@@ -47,7 +47,7 @@
 	:global(.content-section h2) {
 		border-bottom: 2px solid var(--text-color);
 		padding-bottom: 0.5rem;
-		margin-top: 2rem;
+		margin-top: 4rem;
 	}
 
 	:global(.content-section h3) {

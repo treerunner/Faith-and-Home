@@ -127,7 +127,7 @@
 	}
 
 	.logo-link {
-		display: inline-block;
+		display: block;
 		text-decoration: none;
 	}
 
@@ -136,22 +136,18 @@
 	}
 
 	.masthead-logo {
-		max-width: none;
-		width: 800px;
+		width: 100%;
 		height: auto;
 		margin-bottom: .25rem;
-	}
-
-	@media (max-width: 850px) {
-		.masthead-logo {
-			width: 90vw;
-		}
+		display: block;
 	}
 
 	.subtitle {
 		font-size: 1.25rem;
 		color: var(--text-color);
 		max-width: 600px;
+		text-align: left;
+		margin: 0;
 	}
 
 	main {
