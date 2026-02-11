@@ -122,7 +122,7 @@
 	.masthead {
 		background: var(--bg-color);
 		color: var(--text-color);
-		padding: 4rem 0;
+		padding: 4rem 0 2rem 0;
 		text-align: center;
 	}
 
@@ -184,6 +184,7 @@
 
 		.subtitle {
 			font-size: 1rem;
+			max-width: 250px;
 		}
 	}
 </style>

@@ -1,4 +1,4 @@
-# Welcome to Faith & Home
+# Welcome
 
 Allentown faces a housing crisis. Rents have jumped 45% since 2020, and more than half of our neighbors struggle to afford their homes. At the same time, many local churches are navigating declining membership and underused buildings. *Faith & Home* brings these challenges together into a solution: transforming under-utilized church properties into affordable homes while keeping congregations vital and mission-focused.
 
