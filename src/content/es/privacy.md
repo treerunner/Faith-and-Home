@@ -10,11 +10,11 @@ El Proyecto *Faith & Home*, realizado por el *Small Cities Lab* de la *Lehigh Un
 
 Cuando participa en nuestra encuesta y entrevistas, podemos recopilar los siguientes tipos de información:
 
-### Respuestas de la Encuesta
+**Respuestas de la Encuesta:**
 - Información demográfica (edad, composición familiar, ubicación geográfica)
 - Respuestas a preguntas sobre su relación con la fe y el hogar.
 
-### Información Técnica
+**Información Técnica:**
 - Dirección IP (recopilada automáticamente por motivos de seguridad)
 - Tipo de navegador e información del dispositivo
 - Marcas de tiempo de finalización de la encuesta

@@ -44,14 +44,20 @@
 		padding: 4rem 0;
 	}
 
-	:global(.content-section h2) {
-		border-bottom: 2px solid var(--text-color);
-		padding-bottom: 0.5rem;
-		margin-top: 4rem;
+	:global(.content-section h1) {
+		border-bottom: 3px solid var(--text-color);
+		padding-bottom: 1rem;
+		margin-bottom: 2rem;
+		margin-top: 5rem;
 	}
 
-	:global(.content-section h3) {
-		margin-top: 1.5rem;
+	:global(.content-section h1:first-of-type) {
+		margin-top: 0;
+	}
+
+	:global(.content-section h2) {
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
 	}
 
 	:global(.content-section ul) {
@@ -74,7 +80,7 @@
 		flex-direction: column;
 	}
 
-	:global(.participation-methods h4) {
+	:global(.participation-methods h2) {
 		margin-top: 0;
 		margin-bottom: 1rem;
 		font-size: 1.25rem;

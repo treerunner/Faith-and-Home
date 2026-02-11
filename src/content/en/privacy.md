@@ -10,11 +10,11 @@ The *Faith & Home* Project, conducted by the *Small Cities Lab* at *Lehigh Unive
 
 When you participate in our survey and interviews, we may collect the following types of information:
 
-### Survey Responses
+**Survey Responses:**
 - Demographic information (age, family composition, geographic location)
 - Responses to questions about your relationship to faith and home.
 
-### Technical Information
+**Technical Information:**
 - IP address (collected automatically for security purposes)
 - Browser type and device information
 - Survey completion timestamps
