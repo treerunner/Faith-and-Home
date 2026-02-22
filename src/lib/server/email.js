@@ -1,8 +1,7 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function sendCompletionEmail(respondent, langData) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const rows = respondent.responses.map(r => {
     const q = langData.questions.find(q => q.number === r.question_num);
     return `
