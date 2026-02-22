@@ -11,7 +11,7 @@ export async function POST({ request, params }) {
   const lang = getLang(respondent?.language);
 
   return twiml(
-    navGather('/voice/navigate', lang.voice, lang.prompts.afterAnswer) +
-    redirect('/voice/navigate')
+    navGather(`/voice/navigate?just=${n}`, lang.voice, lang.prompts.afterAnswer) +
+    redirect(`/voice/navigate?just=${n}`)
   );
 }

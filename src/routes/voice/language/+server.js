@@ -1,5 +1,5 @@
-import { twiml, say, record, redirect } from '$lib/server/twiml.js';
-import { getRespondent, setLanguage } from '$lib/server/db.js';
+import { twiml, say, record } from '$lib/server/twiml.js';
+import { setLanguage } from '$lib/server/db.js';
 import { getLang } from '$lib/server/survey.js';
 
 export async function POST({ request, url }) {
@@ -10,10 +10,10 @@ export async function POST({ request, url }) {
   const language = digits.trim() === '1' ? 'es' : 'en';
   await setLanguage(phone, language);
 
-  const respondent = await getRespondent(phone);
   const lang = getLang(language);
 
-  const statusCallbackUrl = `${url.origin}/voice/recording-ready/intro`;
+  const encodedPhone = encodeURIComponent(phone);
+  const statusCallbackUrl = `${url.origin}/voice/recording-ready/intro?phone=${encodedPhone}`;
 
   return twiml(
     say(lang.prompts.welcome, lang.voice) +

@@ -3,7 +3,7 @@ import { getRespondent, getAnswered, markCompleted, getFullRespondent } from '$l
 import { getLang, getNextUnanswered, TOTAL_QUESTIONS } from '$lib/server/survey.js';
 import { sendCompletionEmail } from '$lib/server/email.js';
 
-export async function POST({ request }) {
+export async function POST({ request, url }) {
   const form = await request.formData();
   const phone = form.get('From');
   const digits = (form.get('Digits') ?? '').trim();
@@ -12,11 +12,17 @@ export async function POST({ request }) {
   const lang = getLang(respondent?.language);
   const answered = await getAnswered(respondent.id);
 
+  // If coming from answer/[n], that question isn't saved yet — include it
+  const justAnswered = parseInt(url.searchParams.get('just') ?? '', 10);
+  const answeredFull = !isNaN(justAnswered)
+    ? [...new Set([...answered, justAnswered])]
+    : answered;
+
   let target;
 
   if (digits === '' || digits === '#') {
     // Default — next unanswered question
-    target = getNextUnanswered(answered);
+    target = getNextUnanswered(answeredFull);
   } else {
     const num = parseInt(digits, 10);
     if (isNaN(num) || num < 1 || num > TOTAL_QUESTIONS) {
@@ -28,7 +34,7 @@ export async function POST({ request }) {
     target = num;
   }
 
-  // All questions answered
+  // All questions answered (based on answeredFull so last question is counted)
   if (!target) {
     if (!respondent.completed_at) {
       await markCompleted(phone);
