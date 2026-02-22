@@ -1,6 +1,3 @@
-
-Copy
-
 import { initDb } from '$lib/server/db.js';
 
 const SECRET = process.env.INIT_SECRET ?? 'change-me';
