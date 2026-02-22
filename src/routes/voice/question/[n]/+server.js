@@ -2,7 +2,7 @@ import { twiml, say, record, redirect } from '$lib/server/twiml.js';
 import { getRespondent } from '$lib/server/db.js';
 import { getLang, TOTAL_QUESTIONS } from '$lib/server/survey.js';
 
-export async function POST({ request, params }) {
+export async function POST({ request, params, url }) {
   const n = parseInt(params.n, 10);
   const form = await request.formData();
   const phone = form.get('From');
@@ -15,9 +15,11 @@ export async function POST({ request, params }) {
   const lang = getLang(respondent?.language);
   const question = lang.questions.find(q => q.number === n);
 
+  const statusCallbackUrl = `${url.origin}/voice/recording-ready/${n}`;
+
   return twiml(
     say(question.text, lang.voice) +
     say(lang.prompts.recordingInstruction, lang.voice) +
-    record(`/voice/answer/${n}`)
+    record(`/voice/answer/${n}`, statusCallbackUrl)
   );
 }

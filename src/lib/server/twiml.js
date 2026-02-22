@@ -18,18 +18,16 @@ export function say(text, voice) {
   return `<Say voice="${voice}">${escapeXml(text)}</Say>`;
 }
 
-// Navigation gather — waits for digits + pound, or just pound for "next"
 export function navGather(action, voice, prompt) {
   return `<Gather finishOnKey="#" timeout="15" action="${action}" method="POST">${say(prompt, voice)}</Gather>`;
 }
 
-// Single-digit gather for language selection
 export function digitGather(action, voice, prompt, numDigits = 1) {
   return `<Gather numDigits="${numDigits}" timeout="8" action="${action}" method="POST">${say(prompt, voice)}</Gather>`;
 }
 
-export function record(action, maxLength = 300) {
-  return `<Record action="${action}" method="POST" finishOnKey="#" maxLength="${maxLength}" playBeep="true"/>`;
+export function record(action, statusCallbackUrl, maxLength = 300) {
+  return `<Record action="${action}" method="POST" finishOnKey="#" maxLength="${maxLength}" playBeep="true" recordingStatusCallback="${statusCallbackUrl}" recordingStatusCallbackMethod="POST"/>`;
 }
 
 export function redirect(url) {
