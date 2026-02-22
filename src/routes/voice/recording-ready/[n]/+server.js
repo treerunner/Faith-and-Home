@@ -1,9 +1,9 @@
 import { getRespondent, saveResponse, setIntroUrl } from '$lib/server/db.js';
 import { saveToBlobFromTwilio } from '$lib/server/recordings.js';
 
-export async function POST({ request, params }) {
+export async function POST({ request, params, url }) {
   const form = await request.formData();
-  const phone = form.get('From');
+  const phone = url.searchParams.get('phone') ?? form.get('From');
   const recordingUrl = form.get('RecordingUrl');
   const duration = parseInt(form.get('RecordingDuration') ?? '0', 10);
   const recordingStatus = form.get('RecordingStatus');

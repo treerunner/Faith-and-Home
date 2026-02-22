@@ -15,7 +15,8 @@ export async function POST({ request, params, url }) {
   const lang = getLang(respondent?.language);
   const question = lang.questions.find(q => q.number === n);
 
-  const statusCallbackUrl = `${url.origin}/voice/recording-ready/${n}`;
+  const encodedPhone = encodeURIComponent(phone);
+  const statusCallbackUrl = `${url.origin}/voice/recording-ready/${n}?phone=${encodedPhone}`;
 
   return twiml(
     say(question.text, lang.voice) +
