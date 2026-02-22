@@ -35,16 +35,11 @@
 			<div class="masthead-content">
 				<a href="/" class="logo-link">
 					<img
-						src="/images/f-h-masthead.svg"
+						src="/images/{currentLocale === 'en' ? 'f-h-masthead-en' : 'f-h-masthead-es'}.svg"
 						alt="Faith & Home - {currentLocale === 'en' ? 'Return to Home' : 'Volver al Inicio'}"
 						class="masthead-logo"
 					/>
 				</a>
-				<p class="subtitle">
-					{currentLocale === 'en'
-						? 'Building Community Through Affordable Housing'
-						: 'Construyendo Comunidad a Través de Vivienda Asequible'}
-				</p>
 			</div>
 		</div>
 	</section>
@@ -138,16 +133,7 @@
 	.masthead-logo {
 		width: 100%;
 		height: auto;
-		margin-bottom: .25rem;
 		display: block;
-	}
-
-	.subtitle {
-		font-size: 1.25rem;
-		color: var(--text-color);
-		max-width: 600px;
-		text-align: left;
-		margin: 0;
 	}
 
 	main {
@@ -180,11 +166,6 @@
 			top: 0.75rem;
 			right: 1rem;
 			font-size: 0.75rem;
-		}
-
-		.subtitle {
-			font-size: 1rem;
-			max-width: 250px;
 		}
 	}
 </style>

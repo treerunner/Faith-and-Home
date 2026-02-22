@@ -10,11 +10,30 @@ A través de talleres de diseño y diálogos comunitarios, ayudamos a las congre
 
 Nuestro proyecto piloto creará de 6 a 12 hogares de alquiler asequibles en un sitio de iglesia, mezclando vivienda con espacios de adoración y comunitarios. Hemos solicitado financiamiento estatal para hacer realidad esta visión para 2026.
 
+<img src="/images/f-h-hr-es.svg" alt="" class="section-divider" />
+
 # Encuesta
 
 Ya sea que sea miembro de una congregación, vecino, inquilino o defensor de la comunidad, su voz importa en la formación de viviendas basadas en la fe. Juntos, podemos transformar espacios subutilizados en hogares prósperos y construir un Allentown más asequible.
 
 Antes de participar, revise nuestra [Política de Privacidad](/privacy) y [Términos y Condiciones](/terms) para comprender cómo se protegerá y utilizará su información.
+
+Estas doce preguntas son el corazón de la investigación de *Faith & Home*. Sus respuestas — ya sea que conteste una o las doce — moldean directamente nuestra comprensión de cómo las comunidades de fe navegan la vivienda, el sentido de pertenencia y el futuro. No hay respuestas correctas o incorrectas, solo su historia. Para la encuesta telefónica, marque el número a continuación e ingrese el número de pregunta cuando se le indique para ir directamente a cualquier pregunta.
+
+<div class="survey-questions">
+  <div class="survey-question"><span class="question-number">1</span><span>¿Cómo describiría la misión o el propósito de su iglesia con sus propias palabras?</span></div>
+  <div class="survey-question"><span class="question-number">2</span><span>¿De qué maneras su iglesia influye o da forma al vecindario o comunidad que la rodea?</span></div>
+  <div class="survey-question"><span class="question-number">3</span><span>¿Qué papel desempeñan el clero y los líderes laicos en la dirección de la iglesia, y qué tan bien se alinea esto con las necesidades locales?</span></div>
+  <div class="survey-question"><span class="question-number">4</span><span>¿Cómo ha cambiado la membresía y participación de su congregación a lo largo del tiempo, y qué factores han influido en esos cambios?</span></div>
+  <div class="survey-question"><span class="question-number">5</span><span>¿Cómo han evolucionado los patrones de donaciones económicas, y qué determina la manera en que las personas deciden dar?</span></div>
+  <div class="survey-question"><span class="question-number">6</span><span>¿Cómo se manifiestan las diferencias de edad, raza, ingresos o creencias en su congregación, y cómo afectan el sentido de pertenencia de las personas?</span></div>
+  <div class="survey-question"><span class="question-number">7</span><span>¿Qué significa para su iglesia sentirse como un "hogar," y ha cambiado ese significado con el tiempo?</span></div>
+  <div class="survey-question"><span class="question-number">8</span><span>¿Cómo afectan los cambios en el liderazgo, el estilo de adoración, la demografía o el edificio mismo a la conexión de las personas con la iglesia?</span></div>
+  <div class="survey-question"><span class="question-number">9</span><span>¿Cómo se relacionan o refuerzan mutuamente la vida eclesial, la vida familiar y el vecindario circundante?</span></div>
+  <div class="survey-question"><span class="question-number">10</span><span>¿Cómo moldean los espacios y rituales de la iglesia las relaciones, las rutinas y la vida espiritual?</span></div>
+  <div class="survey-question"><span class="question-number">11</span><span>¿Cómo comprenden las personas de su congregación su papel en relación con las necesidades locales de vivienda y el cuidado comunitario?</span></div>
+  <div class="survey-question"><span class="question-number">12</span><span>De cara al futuro, ¿qué esperanzas tiene sobre el papel de su iglesia en la comunidad?</span></div>
+</div>
 
 ## ¿Listo para Participar?
 
@@ -42,7 +61,7 @@ Puede participar en esta encuesta de tres maneras:
 
 # Una Asociación Arraigada en la Comunidad
 
-*Faith & Home* es una colaboración entre la ***Lehigh Conference of Churches*** y el ***Small Cities Lab*** de la *Lehigh University*.
+*Faith & Home* es una colaboración entre la *[Lehigh Conference of Churches](https://lehighchurches.org/)* y el *[Small Cities Lab](https://www.smallcitieslab.org/)* de la *Lehigh University*.
 
 El *Small Cities Lab* se basa en el conocimiento local para desarrollar mejores prácticas, marcos de políticas y soluciones escalables para ciudades pequeñas que están crónicamente poco estudiadas y con recursos insuficientes.
 

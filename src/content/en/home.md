@@ -16,11 +16,30 @@ communities lead the process.
 Our pilot project will create 6-12 affordable rental homes on a church
 site, blending housing with worship and community spaces. We've applied for state funding to make this vision real by 2026.
 
+<img src="/images/f-h-hr-en.svg" alt="" class="section-divider" />
+
 # Survey
 
 Whether you're a congregation member, neighbor, renter, or community advocate, your voice matters in shaping faith-based housing. Together, we can transform underused spaces into thriving homes and build a more affordable Allentown.
 
 Before participating, please review our [Privacy Policy](/privacy) and [Terms and Conditions](/terms) to understand how your information will be protected and used.
+
+These twelve questions are at the heart of the *Faith & Home* research. Your responses — whether you answer one or all twelve — directly shape our understanding of how faith communities navigate housing, belonging, and the future. There are no right or wrong answers, only your story. For the phone survey, dial the number below and enter the question number at the prompt to go directly to any question.
+
+<div class="survey-questions">
+  <div class="survey-question"><span class="question-number">1</span><span>How would you describe your church's mission or purpose, in your own words?</span></div>
+  <div class="survey-question"><span class="question-number">2</span><span>In what ways does your church shape or influence the surrounding neighborhood or community?</span></div>
+  <div class="survey-question"><span class="question-number">3</span><span>What role do clergy and lay leaders play in guiding the church's direction, and how well does that align with local needs?</span></div>
+  <div class="survey-question"><span class="question-number">4</span><span>How has your congregation's membership and participation changed over time, and what factors have influenced those changes?</span></div>
+  <div class="survey-question"><span class="question-number">5</span><span>How have patterns of financial giving evolved, and what shapes how people choose to give?</span></div>
+  <div class="survey-question"><span class="question-number">6</span><span>How do differences in age, race, income or beliefs show up in your congregation, and how do they affect people's sense of belonging?</span></div>
+  <div class="survey-question"><span class="question-number">7</span><span>What does it mean for your church to feel like "home," and has that meaning shifted over time?</span></div>
+  <div class="survey-question"><span class="question-number">8</span><span>How do changes in leadership, worship style, demographics, or the building itself affect people's connection to the church?</span></div>
+  <div class="survey-question"><span class="question-number">9</span><span>How do church life, family life, and the surrounding neighborhood intersect or reinforce one another?</span></div>
+  <div class="survey-question"><span class="question-number">10</span><span>How do church spaces and rituals shape relationships, routines, and spiritual life?</span></div>
+  <div class="survey-question"><span class="question-number">11</span><span>How do people in your congregation understand their role in connection to local housing needs and community care?</span></div>
+  <div class="survey-question"><span class="question-number">12</span><span>Looking ahead, what hopes do you have for your church's future role in the community?</span></div>
+</div>
 
 ## Ready to Participate?
 
@@ -49,7 +68,7 @@ You may participate in this survey in three ways:
 
 # A Partnership Rooted in Community
 
-*Faith & Home* is a collaboration between the ***Lehigh Conference of Churches*** and *Lehigh University's* ***Small Cities Lab***.
+*Faith & Home* is a collaboration between the *[Lehigh Conference of Churches](https://lehighchurches.org/)* and *Lehigh University's* *[Small Cities Lab](https://www.smallcitieslab.org/)*.
 
 The *Small Cities Lab* builds upon local knowledge to develop best practices, policy frameworks, and scalable solutions for small cities that are chronically under-studied and under-resourced.
 
