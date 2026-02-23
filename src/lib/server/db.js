@@ -92,3 +92,54 @@ export async function getFullRespondent(phone) {
   `;
   return { ...respondent, responses };
 }
+
+// SMS columns — run once after deployment to add new columns
+export async function migrateDb() {
+  await sql`ALTER TABLE respondents ADD COLUMN IF NOT EXISTS sms_state TEXT`;
+  await sql`ALTER TABLE respondents ADD COLUMN IF NOT EXISTS intro_text TEXT`;
+  await sql`ALTER TABLE respondents ADD COLUMN IF NOT EXISTS sms_opted_in_at TIMESTAMP`;
+  await sql`ALTER TABLE respondents ADD COLUMN IF NOT EXISTS sms_opted_out_at TIMESTAMP`;
+  await sql`ALTER TABLE responses ADD COLUMN IF NOT EXISTS text_response TEXT`;
+}
+
+/** @param {string} phone @param {string} state */
+export async function setSmsState(phone, state) {
+  await sql`
+    UPDATE respondents SET sms_state = ${state}, updated_at = NOW()
+    WHERE phone = ${phone}
+  `;
+}
+
+/** @param {string} phone @param {string} text */
+export async function setIntroText(phone, text) {
+  await sql`
+    UPDATE respondents SET intro_text = ${text}, updated_at = NOW()
+    WHERE phone = ${phone}
+  `;
+}
+
+/** @param {string} phone */
+export async function setSmsOptedIn(phone) {
+  await sql`
+    UPDATE respondents SET sms_opted_in_at = NOW(), updated_at = NOW()
+    WHERE phone = ${phone}
+  `;
+}
+
+/** @param {string} phone */
+export async function setSmsOptedOut(phone) {
+  await sql`
+    UPDATE respondents SET sms_opted_out_at = NOW(), updated_at = NOW()
+    WHERE phone = ${phone}
+  `;
+}
+
+/** @param {number} respondentId @param {number} questionNum @param {string} text */
+export async function saveTextResponse(respondentId, questionNum, text) {
+  await sql`
+    INSERT INTO responses (respondent_id, question_num, text_response)
+    VALUES (${respondentId}, ${questionNum}, ${text})
+    ON CONFLICT (respondent_id, question_num)
+    DO UPDATE SET text_response = ${text}, created_at = NOW()
+  `;
+}

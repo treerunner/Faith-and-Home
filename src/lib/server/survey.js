@@ -20,6 +20,23 @@ export const survey = {
         return `Welcome back to the Faith and Home survey. ${list}`;
       },
     },
+    smsPrompts: {
+      optIn: `Faith & Home Survey (Small Cities Lab / Lehigh Univ). Reply YES to join our ${TOTAL_QUESTIONS}-question community research survey. Up to 15 msgs. Msg & data rates may apply. Reply STOP to cancel, HELP for info.`,
+      welcome: 'Thank you! For Spanish reply 1. For English reply 2 or anything else.',
+      nameChurch: 'Please reply with your first and last name and the name of your church.',
+      questionInstruction: 'Reply with your answer. Text 1\u201310 to jump to a specific question.',
+      afterAnswer: (nextN = 0, nextText = '') => `Saved! Q${nextN}: ${nextText}`,
+      allDone: `You've answered all ${TOTAL_QUESTIONS} questions! Thank you for completing the Faith & Home survey. Your responses will help shape research on faith-based housing in Allentown.`,
+      welcomeBack: (answered) => {
+        const list = answered.length > 0
+          ? `You've answered Q${answered.join(', Q')} so far.`
+          : "You haven't answered any questions yet.";
+        return `Welcome back to Faith & Home! ${list} Reply with a number (1\u201310) to jump to a question, or any message to continue.`;
+      },
+      alreadyDone: `You've completed the survey\u2014thank you! Reply with a number (1\u201310) to update a specific answer.`,
+      invalidJump: `Please reply with a number between 1 and ${TOTAL_QUESTIONS} to jump to a question.`,
+      help: `Faith & Home Survey by Small Cities Lab (Lehigh Univ). Research on faith-based housing in Allentown, PA. Reply STOP to opt out at any time. faithandhome.org`,
+    },
     questions: [
       { number: 1, text: "Question 1. How would you describe your church's mission or purpose, in your own words?" },
       { number: 2, text: "Question 2. In what ways does your church shape or influence the surrounding neighborhood or community?" },
@@ -52,6 +69,23 @@ export const survey = {
         return `Bienvenido de nuevo a la encuesta Fe y Hogar. ${list}`;
       },
     },
+    smsPrompts: {
+      optIn: `Encuesta Fe y Hogar (Small Cities Lab / Univ. Lehigh). Responda SÍ para unirse a nuestra encuesta de investigación comunitaria de ${TOTAL_QUESTIONS} preguntas. Hasta 15 mensajes. Se aplican tarifas de datos. Responda STOP para cancelar, AYUDA para información.`,
+      welcome: 'Gracias. Para español responda 1. Para inglés responda 2 o cualquier otra cosa.',
+      nameChurch: 'Por favor responda con su nombre y apellido y el nombre de su iglesia.',
+      questionInstruction: 'Responda con su respuesta. Escriba 1\u201310 para ir a una pregunta específica.',
+      afterAnswer: (nextN = 0, nextText = '') => `Guardado. P${nextN}: ${nextText}`,
+      allDone: `¡Ha respondido las ${TOTAL_QUESTIONS} preguntas! Gracias por completar la encuesta Fe y Hogar. Sus respuestas ayudarán a orientar la investigación sobre vivienda en Allentown.`,
+      welcomeBack: (answered = /** @type {number[]} */ ([])) => {
+        const list = answered.length > 0
+          ? `Ha respondido P${answered.join(', P')} hasta ahora.`
+          : 'Aún no ha respondido ninguna pregunta.';
+        return `¡Bienvenido de nuevo a Fe y Hogar! ${list} Responda con un número (1\u201310) para ir a una pregunta, o cualquier mensaje para continuar.`;
+      },
+      alreadyDone: `Ha completado la encuesta. ¡Gracias! Responda con un número (1\u201310) para actualizar una respuesta específica.`,
+      invalidJump: `Por favor responda con un número entre 1 y ${TOTAL_QUESTIONS} para ir a una pregunta.`,
+      help: `Encuesta Fe y Hogar de Small Cities Lab (Univ. Lehigh). Investigación sobre vivienda basada en la fe en Allentown, PA. Responda STOP para darse de baja. faithandhome.org`,
+    },
     questions: [
       { number: 1, text: "Pregunta 1. ¿Cómo describiría la misión o el propósito de su iglesia, con sus propias palabras?" },
       { number: 2, text: "Pregunta 2. ¿De qué maneras su iglesia da forma o influye en el barrio o la comunidad circundante?" },
@@ -68,7 +102,8 @@ export const survey = {
 };
 
 export function getLang(code) {
-  return survey[code] ?? survey.en;
+  if (code === 'es') return survey.es;
+  return survey.en;
 }
 
 export function getNextUnanswered(answered) {

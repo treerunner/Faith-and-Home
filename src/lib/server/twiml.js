@@ -37,3 +37,18 @@ export function redirect(url) {
 export function hangup() {
   return `<Hangup/>`;
 }
+
+/** @param {string} message */
+export function sms(message) {
+  return new Response(
+    `<?xml version="1.0" encoding="UTF-8"?><Response><Message>${escapeXml(message)}</Message></Response>`,
+    { headers: { 'Content-Type': 'text/xml' } }
+  );
+}
+
+export function smsEmpty() {
+  return new Response(
+    '<?xml version="1.0" encoding="UTF-8"?><Response></Response>',
+    { headers: { 'Content-Type': 'text/xml' } }
+  );
+}

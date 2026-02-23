@@ -12,9 +12,11 @@ export async function sendCompletionEmail(respondent, langData) {
         <td style="padding:10px;border-bottom:1px solid #eee;vertical-align:top;color:#444;font-size:14px">
           ${q?.text ?? ''}
         </td>
-        <td style="padding:10px;border-bottom:1px solid #eee;vertical-align:top;white-space:nowrap">
-          <a href="${r.recording_url}" style="color:#2563eb">▶ Listen</a>
-          <span style="color:#999;font-size:12px">&nbsp;${r.duration_sec}s</span>
+        <td style="padding:10px;border-bottom:1px solid #eee;vertical-align:top">
+          ${r.recording_url
+            ? `<a href="${r.recording_url}" style="color:#2563eb;white-space:nowrap">▶ Listen</a><span style="color:#999;font-size:12px">&nbsp;${r.duration_sec}s</span>`
+            : `<span style="color:#333;font-size:14px">${r.text_response ?? ''}</span>`
+          }
         </td>
       </tr>
     `;
@@ -37,7 +39,12 @@ export async function sendCompletionEmail(respondent, langData) {
           <tr><td style="color:#64748b;padding:4px 16px 4px 0">Phone</td><td>${respondent.phone}</td></tr>
           <tr><td style="color:#64748b;padding:4px 16px 4px 0">Language</td><td>${respondent.language === 'es' ? 'Spanish' : 'English'}</td></tr>
           <tr><td style="color:#64748b;padding:4px 16px 4px 0">Completed</td><td>${completedAt}</td></tr>
-          ${respondent.intro_url ? `<tr><td style="color:#64748b;padding:4px 16px 4px 0">Name &amp; Church</td><td><a href="${respondent.intro_url}" style="color:#2563eb">▶ Listen</a></td></tr>` : ''}
+          ${respondent.intro_url
+            ? `<tr><td style="color:#64748b;padding:4px 16px 4px 0">Name &amp; Church</td><td><a href="${respondent.intro_url}" style="color:#2563eb">▶ Listen</a></td></tr>`
+            : respondent.intro_text
+              ? `<tr><td style="color:#64748b;padding:4px 16px 4px 0">Name &amp; Church</td><td>${respondent.intro_text}</td></tr>`
+              : ''
+          }
         </table>
         <h3 style="color:#1e293b;border-top:2px solid #e2e8f0;padding-top:16px">Responses</h3>
         <table style="width:100%;border-collapse:collapse;font-size:14px">
