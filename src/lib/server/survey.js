@@ -13,7 +13,7 @@ export const survey = {
       returningNavigation: "Press pound to continue to the next unanswered question, or enter a question number followed by pound to jump to a specific question.",
       invalidQuestion: `Please enter a number between 1 and ${TOTAL_QUESTIONS}, followed by pound.`,
       allDone: "You have now answered all the questions. Thank you for completing the Faith and Home survey. Your responses have been recorded and we are grateful for your time and insight. Goodbye.",
-      welcomeBack: (answered) => {
+      welcomeBack: (answered = /** @type {number[]} */ ([])) => {
         const list = answered.length > 0
           ? `You have already answered question${answered.length > 1 ? 's' : ''} ${answered.join(', ')}.`
           : "You haven't answered any questions yet.";
@@ -27,7 +27,7 @@ export const survey = {
       questionInstruction: 'Reply with your answer. Text 1\u201310 to jump to a specific question.',
       afterAnswer: (nextN = 0, nextText = '') => `Saved! Q${nextN}: ${nextText}`,
       allDone: `You've answered all ${TOTAL_QUESTIONS} questions! Thank you for completing the Faith & Home survey. Your responses will help shape research on faith-based housing in Allentown.`,
-      welcomeBack: (answered) => {
+      welcomeBack: (answered = /** @type {number[]} */ ([])) => {
         const list = answered.length > 0
           ? `You've answered Q${answered.join(', Q')} so far.`
           : "You haven't answered any questions yet.";
@@ -35,7 +35,7 @@ export const survey = {
       },
       alreadyDone: `You've completed the survey\u2014thank you! Reply with a number (1\u201310) to update a specific answer.`,
       invalidJump: `Please reply with a number between 1 and ${TOTAL_QUESTIONS} to jump to a question.`,
-      help: `Faith & Home Survey by Small Cities Lab (Lehigh Univ). Research on faith-based housing in Allentown, PA. Reply STOP to opt out at any time. faithandhome.org`,
+      help: `Faith & Home Survey by Small Cities Lab (Lehigh Univ). Research on faith-based housing in Allentown, PA. Reply STOP to opt out at any time. faithandhome.smallcitieslab.org/privacy`,
     },
     questions: [
       { number: 1, text: "Question 1. How would you describe your church's mission or purpose, in your own words?" },
@@ -62,7 +62,7 @@ export const survey = {
       returningNavigation: "Presione el numeral para continuar con la siguiente pregunta sin responder, o ingrese el número de una pregunta seguido del numeral para ir a una pregunta específica.",
       invalidQuestion: `Por favor ingrese un número entre 1 y ${TOTAL_QUESTIONS}, seguido del numeral.`,
       allDone: "Ha respondido todas las preguntas. Gracias por completar la encuesta Fe y Hogar. Sus respuestas han sido registradas y agradecemos su tiempo y perspectiva. Adiós.",
-      welcomeBack: (answered) => {
+      welcomeBack: (answered = /** @type {number[]} */ ([])) => {
         const list = answered.length > 0
           ? `Ya ha respondido la${answered.length > 1 ? 's' : ''} pregunta${answered.length > 1 ? 's' : ''} ${answered.join(', ')}.`
           : "Aún no ha respondido ninguna pregunta.";
@@ -84,7 +84,7 @@ export const survey = {
       },
       alreadyDone: `Ha completado la encuesta. ¡Gracias! Responda con un número (1\u201310) para actualizar una respuesta específica.`,
       invalidJump: `Por favor responda con un número entre 1 y ${TOTAL_QUESTIONS} para ir a una pregunta.`,
-      help: `Encuesta Fe y Hogar de Small Cities Lab (Univ. Lehigh). Investigación sobre vivienda basada en la fe en Allentown, PA. Responda STOP para darse de baja. faithandhome.org`,
+      help: `Encuesta Fe y Hogar de Small Cities Lab (Univ. Lehigh). Investigación sobre vivienda basada en la fe en Allentown, PA. Responda STOP para darse de baja. faithandhome.smallcitieslab.org/privacy`,
     },
     questions: [
       { number: 1, text: "Pregunta 1. ¿Cómo describiría la misión o el propósito de su iglesia, con sus propias palabras?" },
@@ -101,12 +101,12 @@ export const survey = {
   },
 };
 
-export function getLang(code) {
+export function getLang(code = '') {
   if (code === 'es') return survey.es;
   return survey.en;
 }
 
-export function getNextUnanswered(answered) {
+export function getNextUnanswered(answered = /** @type {number[]} */ ([])) {
   for (let i = 1; i <= TOTAL_QUESTIONS; i++) {
     if (!answered.includes(i)) return i;
   }
