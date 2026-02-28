@@ -35,26 +35,28 @@ Estas diez preguntas son el corazón de la investigación de *Faith & Home*. Sus
 
 ## ¿Listo para Participar?
 
-Puede participar en esta encuesta de tres maneras:
+Puede participar en esta encuesta de dos maneras:
 
 <div class="grid participation-methods">
-  <div class="col-4">
+  <div class="col-6">
     <h2>1. Encuesta Telefónica</h2>
     <p>Marque el número listado para la encuesta completa. O, salte a una pregunta específica en el aviso.</p>
     <p><strong>(610)-936-6186</strong></p>
   </div>
 
-  <div class="col-4">
+  <div class="col-6">
     <h2>2. Formulario Web</h2>
     <p>Haga clic en el botón a continuación para comenzar la encuesta y compartir el viaje de fe de su familia con nosotros.</p>
     <p><a href="https://forms.gle/qMhEymTseu2zDBe18" class="survey-button">Comenzar Encuesta</a></p>
   </div>
 
+  <!--
   <div class="col-4">
     <h2>3. Mensajes de Texto</h2>
     <p>Envíe un mensaje, "Hello Faith & Home," al (610)-936-6186 y siga las indicaciones para responder preguntas por texto.</p>
     <p><strong>(610)-936-6186</strong></p>
   </div>
+  -->
 </div>
 
 # Una Asociación Arraigada en la Comunidad

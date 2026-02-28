@@ -80,7 +80,8 @@
 		margin: 2rem 0;
 	}
 
-	:global(.participation-methods .col-4) {
+	:global(.participation-methods .col-4),
+	:global(.participation-methods .col-6) {
 		padding: 1.5rem;
 		background-color: var(--light-gray);
 		display: flex;
@@ -104,7 +105,8 @@
 	}
 
 	@media (min-width: 769px) and (max-width: 1024px) {
-		:global(.participation-methods .col-4) {
+		:global(.participation-methods .col-4),
+		:global(.participation-methods .col-6) {
 			grid-column: span 12;
 		}
 	}

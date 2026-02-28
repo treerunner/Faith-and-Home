@@ -41,26 +41,28 @@ These ten questions are at the heart of the *Faith & Home* research. Your respon
 
 ## Ready to Participate?
 
-You may participate in this survey in three ways:
+You may participate in this survey in two ways:
 
 <div class="grid participation-methods">
-  <div class="col-4">
+  <div class="col-6">
     <h2>1. Phone Survey</h2>
     <p>Dial the listed number for the full survey. Or, skip to a specific question at the prompt.</p>
     <p><strong>(610)-936-6186</strong></p>
   </div>
 
-  <div class="col-4">
+  <div class="col-6">
     <h2>2. Web Form</h2>
     <p>Click the button below to begin the survey and share your family's faith journey with us.</p>
     <p><a href="https://forms.gle/qMhEymTseu2zDBe18" class="survey-button">Begin Survey</a></p>
   </div>
 
+  <!--
   <div class="col-4">
     <h2>3. Text Messaging</h2>
     <p>Send a message, "Hello Faith & Home," and follow the prompts to respond to questions by text.</p>
     <p><strong>(610)-936-6186</strong></p>
   </div>
+  -->
 </div>
 
 
